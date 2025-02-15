@@ -19,7 +19,7 @@ export function AuroraText({
   return (
     <Component
       className={cn(
-        "relative inline-flex bg-[linear-gradient(110deg,hsl(var(--color-1)),hsl(var(--color-2)),hsl(var(--color-3)))] bg-clip-text text-transparent bg-[length:200%_auto] animate-text-gradient",
+        "relative inline-flex bg-[linear-gradient(110deg,hsl(var(--color-1)),hsl(var(--color-2)),hsl(var(--color-3)))] bg-clip-text text-transparent transition-colors duration-[2000ms]",
         className
       )}
       {...props}

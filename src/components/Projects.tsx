@@ -14,11 +14,21 @@ import { Button } from "./ui/button";
 import { Github, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import { portfolioData } from "@/data/portfolio";
+import { SparklesCore } from "./ui/sparkles";
+import { Meteors } from "./ui/meteors";
 
 export function Projects() {
   return (
-    <section id="projects" className="py-20 bg-black text-white">
-      <div className="container px-4 mx-auto">
+    <section id="projects" className="relative py-20 bg-black text-white overflow-hidden">
+      <SparklesCore
+        background="black"
+        minSize={0.4}
+        maxSize={1}
+        particleDensity={70}
+        className="absolute inset-0 w-full h-full"
+      />
+      <Meteors className="absolute inset-0" />
+      <div className="container relative z-10 px-4 mx-auto">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -36,7 +46,7 @@ export function Projects() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="bg-zinc-900 border-zinc-800 overflow-hidden">
+              <Card className="bg-zinc-900 border-zinc-800 overflow-hidden h-full flex flex-col">
                 {project.image && (
                   <div className="relative h-48 w-full">
                     <Image
@@ -47,13 +57,13 @@ export function Projects() {
                     />
                   </div>
                 )}
-                <CardHeader>
+                <CardHeader className="flex-grow">
                   <CardTitle className="text-white">{project.title}</CardTitle>
                   <CardDescription className="text-gray-400">
                     {project.description}
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="">
                   <div className="flex gap-2 flex-wrap">
                     {project.technologies.map((tech) => (
                       <Badge key={tech} variant="secondary">

@@ -22,7 +22,7 @@ export const ShimmerButtonPlop = React.forwardRef<
       shimmerSize = "0.05em",
       shimmerDuration = "3s",
       borderRadius = "100px",
-      background = "rgba(255, 255, 255, 1)",
+      background = "rgb(94, 93, 93)",
       className,
       children,
       ...props
