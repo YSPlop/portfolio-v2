@@ -13,7 +13,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from ".
 import { ChevronDown } from "lucide-react";
 import { sendEmail } from '@/lib/actions';
 import styles from '@/styles/contact.module.css';
-
+import { Badge } from "./ui/badge";
+import { SparklesCore } from '@/components/ui/sparkles';
 export interface FormData {
   firstName: string
   lastName: string
@@ -32,6 +33,21 @@ export interface FormData {
   budget: string
   description: string
 }
+
+const serviceCards = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const serviceCard = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0 }
+};
 
 export function Contact() {
   const [formData, setFormData] = useState<FormData>({
@@ -76,8 +92,16 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-black text-gray-100">
-      <div className="container px-4 mx-auto">
+    <section id="contact" className="relative py-20 bg-black text-gray-100">
+      <SparklesCore
+        background="transparent"
+        minSize={1}
+        maxSize={2}
+        particleDensity={100}
+        className="absolute inset-0"
+        particleColor="rgba(255, 255, 255, 0.3)"
+      />
+      <div className="container px-4 mx-auto relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -178,29 +202,83 @@ export function Contact() {
                   </div>
                 </div>
 
-                <div className="space-y-4">
+                <div className="space-y-6">
                   <h3 className="text-xl font-bold text-white">What services do you need?</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {Object.entries(formData.services).map(([service, checked]) => (
-                      <div key={service} className="flex items-center space-x-2">
-                        <input
-                          type="checkbox"
-                          checked={checked}
-                          onChange={() => handleServiceChange(service as keyof typeof formData.services)}
-                          className="rounded border-zinc-600"
-                        />
-                        <label className="text-sm text-gray-400">
-                          {service === 'websiteDevelopment' ? 'Website Development' :
-                           service === 'appDevelopment' ? 'App Development' :
-                           service === 'designSystem' ? 'Design System' :
-                           service === 'websiteMigration' ? 'Website Migration' :
-                           service === 'ecommerceSite' ? 'E-commerce Site' :
-                           service === 'performanceEvaluation' ? 'Performance Evaluation' :
-                           service}
-                        </label>
-                      </div>
-                    ))}
-                  </div>
+                  <motion.div 
+                    variants={serviceCards}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true }}
+                    className="grid grid-cols-1 md:grid-cols-2 gap-4"
+                  >
+                    {Object.entries(formData.services).map(([service, checked]) => {
+                      const serviceLabel = {
+                        websiteDevelopment: 'Website Development',
+                        appDevelopment: 'App Development',
+                        designSystem: 'Design System',
+                        websiteMigration: 'Website Migration',
+                        ecommerceSite: 'E-commerce Site',
+                        performanceEvaluation: 'Performance Evaluation'
+                      }[service];
+
+                      return (
+                        <motion.div
+                          key={service}
+                          variants={serviceCard}
+                          className="relative"
+                        >
+                          <Card
+                            className={`p-4 cursor-pointer transition-all duration-300 ${
+                              checked 
+                                ? 'bg-blue-600/20 border-blue-500' 
+                                : 'bg-zinc-800/50 border-zinc-700 hover:bg-zinc-800'
+                            }`}
+                            onClick={() => handleServiceChange(service as keyof typeof formData.services)}
+                          >
+                            <div className="flex items-start space-x-3">
+                              <div className="flex-1">
+                                <h4 className="font-medium text-white mb-1">{serviceLabel}</h4>
+                                {checked && (
+                                  <motion.div
+                                    initial={{ opacity: 0, scale: 0.8 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    transition={{ duration: 0.2 }}
+                                  >
+                                    <Badge variant="secondary" className="bg-blue-500/20 text-blue-300">
+                                      Selected
+                                    </Badge>
+                                  </motion.div>
+                                )}
+                              </div>
+                              <div className={`w-5 h-5 rounded-full border-2 transition-all duration-200 ${
+                                checked 
+                                  ? 'border-blue-500 bg-blue-500' 
+                                  : 'border-zinc-600'
+                              }`}>
+                                {checked && (
+                                  <motion.svg
+                                    initial={{ opacity: 0, scale: 0 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    className="w-full h-full text-white p-0.5"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                  >
+                                    <path
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      strokeWidth={3}
+                                      d="M5 13l4 4L19 7"
+                                    />
+                                  </motion.svg>
+                                )}
+                              </div>
+                            </div>
+                          </Card>
+                        </motion.div>
+                      );
+                    })}
+                  </motion.div>
                 </div>
 
                 <div className={styles.inputContainer}>

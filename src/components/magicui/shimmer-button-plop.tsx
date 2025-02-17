@@ -22,7 +22,7 @@ export const ShimmerButtonPlop = React.forwardRef<
       shimmerSize = "0.05em",
       shimmerDuration = "3s",
       borderRadius = "100px",
-      background = "rgb(94, 93, 93)",
+      background = "white",
       className,
       children,
       ...props
@@ -68,13 +68,13 @@ export const ShimmerButtonPlop = React.forwardRef<
         <div
           className={cn(
             "insert-0 absolute size-full",
-            "rounded-2xl px-4 py-1.5 text-sm font-medium shadow-[inset_0_-8px_10px_#00000080]",
+            "rounded-2xl px-4 py-1.5 text-sm font-medium shadow-[inset_0_-8px_10px_#000000cc]",
             // transition
             "transform-gpu transition-all duration-300 ease-in-out",
             // on hover
-            "group-hover:shadow-[inset_0_-6px_10px_#000000cc]",
+            "group-hover:shadow-[inset_0_-6px_10px_#000000]",
             // on click
-            "group-active:shadow-[inset_0_-10px_10px_#0000003f]",
+            "group-active:shadow-[inset_0_-10px_10px_#00000066]",
           )}
         />
 

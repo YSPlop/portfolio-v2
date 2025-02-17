@@ -37,8 +37,8 @@ export function Projects() {
         >
           Featured Projects
         </motion.h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {portfolioData.projects.map((project, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {portfolioData.projects.slice(0, 6).map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
@@ -65,10 +65,28 @@ export function Projects() {
                 </CardHeader>
                 <CardContent className="">
                   <div className="flex gap-2 flex-wrap">
-                    {project.technologies.map((tech) => (
-                      <Badge key={tech} variant="secondary">
-                        {tech}
-                      </Badge>
+                    {project.technologies.map((tech, techIndex) => (
+                      <motion.div
+                        key={tech}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{
+                          delay: index * 0.1 + techIndex * 0.05,
+                          type: "spring",
+                          stiffness: 100
+                        }}
+                      >
+                        <Badge 
+                          key={tech} 
+                          variant="secondary"
+                          className="bg-zinc-800/50 text-zinc-100 border border-zinc-700/50 
+                            backdrop-blur-sm hover:bg-zinc-700/50 transition-all duration-300
+                            shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]
+                            px-3 py-1 text-xs font-medium"
+                        >
+                          {tech}
+                        </Badge>
+                      </motion.div>
                     ))}
                   </div>
                 </CardContent>
@@ -94,6 +112,24 @@ export function Projects() {
             </motion.div>
           ))}
         </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center"
+        >
+          <Button 
+            variant="outline" 
+            size="lg" 
+            asChild
+            className="bg-white text-black hover:bg-black hover:text-white transition-colors"
+          >
+            <a href="/projects">
+              View All Projects
+              <ExternalLink className="w-4 h-4 ml-2" />
+            </a>
+          </Button>
+        </motion.div>
       </div>
     </section>
   );

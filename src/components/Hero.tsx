@@ -18,7 +18,7 @@ export function Hero() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="relative min-h-screen flex items-center justify-center bg-black text-white overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center text-white overflow-hidden"
     >
       <div className="relative h-[100vh] w-full flex flex-col items-center justify-center overflow-hidden">
       <SparklesCore

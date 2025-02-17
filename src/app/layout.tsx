@@ -25,8 +25,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <div className="relative min-h-screen bg-black">
+      <body className="bg-black">
+        <div className="relative min-h-screen">
+          <SparklesCore
+            background="transparent"
+            minSize={1}
+            maxSize={2}
+            particleDensity={100}
+            className="fixed inset-0 z-0"
+            particleColor="rgba(255, 255, 255, 0.8)"
+          />
           <div className="relative z-10">
             {children}
           </div>

@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { Button } from "./ui/button";
 import { Separator } from "@/components/ui/separator";
-
+import { SparklesCore } from "@/components/ui/sparkles";
 export function Footer() {
   const currentYear = new Date().getFullYear();
   
@@ -33,8 +33,16 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-black text-white py-12">
-      <div className="container px-4 mx-auto text-center md:text-left">
+    <footer className="relative bg-black text-white py-12">
+      <SparklesCore
+        background="transparent"
+        minSize={1}
+        maxSize={2}
+        particleDensity={100}
+        className="absolute inset-0"
+        particleColor="rgba(255, 255, 255, 0.3)"
+      />
+      <div className="container px-4 mx-auto text-center md:text-left relative">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
