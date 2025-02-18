@@ -17,6 +17,7 @@ import Image from "next/image";
 import { portfolioData } from "@/data/portfolio";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { Meteors } from "@/components/ui/meteors";
+import Link from "next/link";
 
 export default function ProjectsPage() {
   return (
@@ -38,10 +39,10 @@ export default function ProjectsPage() {
             className="mb-8"
           >
             <Button variant="ghost" size="sm" asChild>
-              <a href="/#projects">
+              <Link href="/#projects">
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Back to Home
-              </a>
+              </Link>
             </Button>
           </motion.div>
 

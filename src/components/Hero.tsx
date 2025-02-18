@@ -1,8 +1,6 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Link as ScrollLink } from "react-scroll";
 import { portfolioData } from "@/data/portfolio";
 import { AuroraText } from "@/components/magicui/aurora-text";

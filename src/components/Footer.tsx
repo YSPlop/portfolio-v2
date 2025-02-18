@@ -113,7 +113,7 @@ export function Footer() {
           >
             <h3 className="text-xl font-bold">Get in Touch</h3>
             <p className="text-zinc-400">
-              Have a project in mind? Let's talk about it.
+              {"Have a project in mind? Let's talk about it."}
             </p>
             <Button variant="default" asChild>
               <a href="mailto:your@email.com">Contact Me</a>

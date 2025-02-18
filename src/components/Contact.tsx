@@ -4,13 +4,7 @@ import { motion } from "framer-motion";
 import { useState } from 'react';
 import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
-import { Input } from "./ui/input";
-import { Textarea } from "./ui/textarea";
-import { Label } from "./ui/label";
-import { RadioGroup, RadioGroupItem } from "./ui/radio-group";
-import { Checkbox } from "./ui/checkbox";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
-import { ChevronDown } from "lucide-react";
 import { sendEmail } from '@/lib/actions';
 import styles from '@/styles/contact.module.css';
 import { Badge } from "./ui/badge";
@@ -131,7 +125,8 @@ export function Contact() {
         budget: '',
         description: ''
       });
-    } catch (error) {
+    } catch (error: unknown) {
+      console.error('Failed to send email:', error);
       toast({
         variant: "destructive",
         description: "Something went wrong. Please try again later.",

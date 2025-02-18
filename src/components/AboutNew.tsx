@@ -10,22 +10,11 @@ import { personalData } from "@/data/personal";
 import { TracingBeam } from "./ui/tracing-beam";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { Progress } from "@/components/ui/progress";
 import { PokemonCard } from "@/components/ui/pokemon-card";
-import { BackgroundBeams } from "@/components/ui/background-beams";
 import { TextGenerateEffect } from "@/components/text-generate-effect";
-import Image from "next/image";
 import React from "react";
 
-// Add this interface near the top of the file, after the imports
-interface Experience {
-  role: string;
-  company: string;
-  period: string;
-  type?: string;
-  achievements: string[];
-}
 
 export function AboutNew() {
   const [expandedCard, setExpandedCard] = React.useState<string | null>(null);

@@ -104,7 +104,7 @@ export const portfolioData = {
       description: "Modern portfolio website built with Next.js 14, featuring server components, animations with Framer Motion, and a dark theme UI. Includes project showcases, blog integration, and contact form functionality.",
       technologies: ["Next.js", "TypeScript", "Framer Motion", "Tailwind CSS", "shadcn/ui"],
       image: "/projects/portfolio-2024.png?height=300&width=400",
-      link: null,
+      link: "https://portfolio-hazel-five-81.vercel.app/",
       github: "https://github.com/YSPlop/portfolio"
     },
     {
@@ -112,8 +112,8 @@ export const portfolioData = {
       description: "My first portfolio website built during university, showcasing early web development projects and skills. Created with vanilla JavaScript and CSS animations.",
       technologies: ["HTML", "CSS", "JavaScript", "jQuery"],
       image: "/projects/portfolio-2023.png?height=300&width=400",
-      link: null,
-      github: null
+      link: "https://personal-projects-silk.vercel.app/",
+      github: "https://github.com/YSPlop/personal-projects"
     }
   ],
   experience: [

@@ -1,16 +1,16 @@
 'use client';
 
-import { motion, useScroll, useSpring, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { Meteors } from "@/components/ui/meteors";
 import { aboutData } from "@/data/about";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, Download, ExternalLink, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowLeft, Download, Mail, MapPin, Phone } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { TracingBeam } from "@/components/ui/tracing-beam";
-
+import Link from "next/link";
 export default function AboutPage() {
   return (
     <main className="bg-black min-h-screen text-white">
@@ -31,10 +31,10 @@ export default function AboutPage() {
             className="mb-8"
           >
             <Button variant="ghost" size="sm" asChild>
-              <a href="/#about">
+              <Link href="/#about">
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Back to Home
-              </a>
+              </Link>
             </Button>
           </motion.div>
 
