@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 import { ExternalLink } from "lucide-react";
 import { SparklesCore } from "./ui/sparkles";
-import { Meteors } from "./ui/meteors";
 import { portfolioData } from "@/data/portfolio";
 import { AuroraText } from "./magicui/aurora-text";
 import { Card } from "./ui/card";
