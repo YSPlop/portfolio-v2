@@ -61,7 +61,7 @@ export default function ProjectsPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card className="bg-zinc-900 border-zinc-800 overflow-hidden h-full flex flex-col">
+                <Card className="bg-zinc-900/50 border-zinc-800 overflow-hidden h-full flex flex-col transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:border-zinc-700">
                   {project.image && (
                     <div className="relative h-48 w-full">
                       <Image

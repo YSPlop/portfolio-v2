@@ -25,6 +25,16 @@ export const aboutData = {
       ]
     },
     {
+      role: "Software Developer",
+      company: "Freelance",
+      period: "2023 - Present",
+      achievements: [
+        "Designed and deployed a professional music website using Next.js and React.js in TypeScript with Framer Motion and Next UI, reducing page load time by 40% and increasing user engagement by 30% within 3 months.",
+        "Revamped ecolivinsulations.com.au with advanced SEO and custom features; boosted traffic by 70%, improved SERPs by 50%, raised conversions by 45%, and cut bounce by 35% in 6 months.",
+        "Built a full-stack website for Lume Health (NDIS) with Next.js and Node.js, integrating a booking system with Google Suite and Payload CMS for easy edits."
+      ]
+    },
+    {
       role: "Software Engineer Intern",
       company: "SideChef",
       period: "February 2024 - May 2024",
@@ -43,15 +53,6 @@ export const aboutData = {
       ]
     }
   ],
-
-  freelance: {
-    title: "Freelance Web Developer",
-    projects: [
-      "Designed and deployed a professional music website using Next.js and React.js in TypeScript with Framer Motion and Next UI, reducing page load time by 40% and increasing user engagement by 30% within 3 months.",
-      "Revamped ecolivinsulations.com.au with advanced SEO and custom features; boosted traffic by 70%, improved SERPs by 50%, raised conversions by 45%, and cut bounce by 35% in 6 months.",
-      "Built a full-stack website for Lume Health (NDIS) with Next.js and Node.js, integrating a booking system with Google Suite and Payload CMS for easy edits."
-    ]
-  },
 
   education: [
     {

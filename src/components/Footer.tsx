@@ -6,31 +6,27 @@ import { MdEmail } from "react-icons/md";
 import { Button } from "./ui/button";
 import { Separator } from "@/components/ui/separator";
 import { SparklesCore } from "@/components/ui/sparkles";
+import { portfolioData } from "@/data/portfolio";
+
+// Create an icon map
+const iconMap = {
+  FaGithub,
+  FaLinkedinIn,
+  FaXTwitter,
+  MdEmail
+};
+
 export function Footer() {
   const currentYear = new Date().getFullYear();
   
-  const socialLinks = [
-    {
-      icon: <FaGithub className="h-5 w-5" />,
-      href: "https://github.com/YSPlop",
-      label: "GitHub"
-    },
-    {
-      icon: <FaLinkedinIn className="h-5 w-5 text-[#0A66C2]" />,
-      href: "https://linkedin.com/in/yourusername",
-      label: "LinkedIn"
-    },
-    {
-      icon: <FaXTwitter className="h-5 w-5" />,
-      href: "https://twitter.com/yourusername",
-      label: "Twitter"
-    },
-    {
-      icon: <MdEmail className="h-5 w-5 text-red-500" />,
-      href: "mailto:your@email.com",
-      label: "Email"
-    }
-  ];
+  const socialLinks = Object.entries(portfolioData.personal.socialLinks).map(([key, value]) => {
+    const Icon = iconMap[value.icon as keyof typeof iconMap];
+    return {
+      icon: <Icon className={`h-5 w-5 ${value.colorClass}`} />,
+      href: value.url,
+      label: value.label
+    };
+  });
 
   return (
     <footer className="relative bg-black text-white py-12">
@@ -50,7 +46,7 @@ export function Footer() {
             viewport={{ once: true }}
             className="space-y-4 flex flex-col items-center md:items-start"
           >
-            <h3 className="text-xl font-bold">Your Name</h3>
+            <h3 className="text-xl font-bold">{portfolioData.personal.firstName} {portfolioData.personal.lastName}</h3>
             <p className="text-zinc-400">
               Building digital experiences with modern web technologies.
             </p>

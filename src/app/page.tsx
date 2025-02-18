@@ -3,12 +3,13 @@ import { Projects } from "@/components/Projects";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { About } from "@/components/About";
+import { AboutNew } from "@/components/AboutNew";
 
 export default function Home() {
   return (
     <main className="bg-black min-h-screen">
       <Hero />
-      <About />
+      <AboutNew />
       <Projects />
       <Contact /> 
       <Footer />

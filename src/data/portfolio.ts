@@ -8,9 +8,30 @@ export const portfolioData = {
     location: "Melbourne, Australia",
     email: "sivarajyukash@gmail.com",
     socialLinks: {
-      github: "https://github.com/YSPlop",
-      linkedin: "https://www.linkedin.com/in/yukash-sivaraj/",
-      twitter: "https://twitter.com/yukashsivaraj"
+      github: {
+        url: "https://github.com/YSPlop",
+        icon: "FaGithub",
+        label: "GitHub",
+        colorClass: "text-white"
+      },
+      linkedin: {
+        url: "https://www.linkedin.com/in/yukash-sivaraj/",
+        icon: "FaLinkedinIn",
+        label: "LinkedIn",
+        colorClass: "text-[#0A66C2]"
+      },
+      twitter: {
+        url: "https://twitter.com/yukashsivaraj",
+        icon: "FaXTwitter",
+        label: "Twitter",
+        colorClass: "text-white"
+      },
+      email: {
+        url: "mailto:sivarajyukash@gmail.com",
+        icon: "MdEmail",
+        label: "Email",
+        colorClass: "text-red-500"
+      }
     }
   },
   skills: [
@@ -87,10 +108,10 @@ export const portfolioData = {
       github: "https://github.com/YSPlop/portfolio"
     },
     {
-      title: "Portfolio Website 2019",
+      title: "Portfolio Website 2023",
       description: "My first portfolio website built during university, showcasing early web development projects and skills. Created with vanilla JavaScript and CSS animations.",
       technologies: ["HTML", "CSS", "JavaScript", "jQuery"],
-      image: "/projects/portfolio-2019.png?height=300&width=400",
+      image: "/projects/portfolio-2023.png?height=300&width=400",
       link: null,
       github: null
     }

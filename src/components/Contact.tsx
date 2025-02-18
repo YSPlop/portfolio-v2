@@ -15,6 +15,9 @@ import { sendEmail } from '@/lib/actions';
 import styles from '@/styles/contact.module.css';
 import { Badge } from "./ui/badge";
 import { SparklesCore } from '@/components/ui/sparkles';
+import { useToast } from "@/hooks/use-toast"
+import { Toaster } from "./ui/toaster"
+
 export interface FormData {
   firstName: string
   lastName: string
@@ -50,6 +53,8 @@ const serviceCard = {
 };
 
 export function Contact() {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState<FormData>({
     firstName: '',
     lastName: '',
@@ -71,13 +76,68 @@ export function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (isSubmitting) return;
+    
+    setIsSubmitting(true);
     try {
       await sendEmail(formData);
-      console.log('Email sent successfully');
-      // Reset form or show success message
+      toast({
+        className: "bg-zinc-800 border-zinc-700 text-white",
+        description: (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="flex flex-col gap-2"
+          >
+            <div className="flex items-center gap-2">
+              <svg
+                className="h-5 w-5 text-green-400"
+                fill="none"
+                strokeWidth="2"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              <span className="font-medium">Message sent successfully!</span>
+            </div>
+            <p className="text-gray-300">
+              Thank you for reaching out. Yukash will get back to you within 24-48 hours.
+            </p>
+          </motion.div>
+        ),
+        duration: 5000,
+      });
+      // Reset form
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        company: '',
+        phone: '',
+        location: 'VIC',
+        services: {
+          websiteDevelopment: false,
+          appDevelopment: false,
+          designSystem: false,
+          websiteMigration: false,
+          ecommerceSite: false,
+          performanceEvaluation: false
+        },
+        budget: '',
+        description: ''
+      });
     } catch (error) {
-      console.error('Failed to send email:', error);
-      // Show error message to user
+      toast({
+        variant: "destructive",
+        description: "Something went wrong. Please try again later.",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -293,14 +353,46 @@ export function Contact() {
                   </label>
                 </div>
 
-                <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700">
-                  Send Message
+                <Button 
+                  type="submit" 
+                  className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-zinc-600 disabled:cursor-not-allowed transition-colors"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? (
+                    <div className="flex items-center gap-2">
+                      <motion.div
+                        animate={{ rotate: 360 }}
+                        transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                      >
+                        <svg className="h-4 w-4" viewBox="0 0 24 24">
+                          <circle 
+                            className="opacity-25" 
+                            cx="12" 
+                            cy="12" 
+                            r="10" 
+                            stroke="currentColor" 
+                            strokeWidth="4"
+                            fill="none"
+                          />
+                          <path 
+                            className="opacity-75" 
+                            fill="currentColor" 
+                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                          />
+                        </svg>
+                      </motion.div>
+                      Sending...
+                    </div>
+                  ) : (
+                    'Send Message'
+                  )}
                 </Button>
               </form>
             </CardContent>
           </Card>
         </motion.div>
       </div>
+      <Toaster />
     </section>
   );
 } 
