@@ -116,7 +116,7 @@ export function Footer() {
               {"Have a project in mind? Let's talk about it."}
             </p>
             <Button variant="default" asChild>
-              <a href="mailto:your@email.com">Contact Me</a>
+              <a href={`mailto:${portfolioData.personal.email}`}>Contact Me</a>
             </Button>
           </motion.div>
         </div>
