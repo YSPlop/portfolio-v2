@@ -80,3 +80,18 @@ body {
     @apply bg-background text-foreground;
   }
 }
+.hover-github:hover svg {
+  color: white;
+}
+
+.hover-linkedin:hover svg {
+  color: #0077B5;
+}
+
+.hover-twitter:hover svg {
+  color: #1DA1F2;
+}
+
+.hover-email:hover svg {
+  color: #EA4335;
+}

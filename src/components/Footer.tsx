@@ -22,9 +22,10 @@ export function Footer() {
   const socialLinks = Object.entries(portfolioData.personal.socialLinks).map(([key, value]) => {
     const Icon = iconMap[value.icon as keyof typeof iconMap];
     return {
-      icon: <Icon className={`h-5 w-5 ${value.colorClass}`} />,
+      icon: <Icon className="h-5 w-5 text-zinc-400 transition-colors" />,
       href: value.url,
-      label: value.label
+      label: value.label,
+      className: `hover-${key.toLowerCase()} hover:bg-zinc-800`
     };
   });
 
@@ -88,6 +89,7 @@ export function Footer() {
                   variant="ghost"
                   size="icon"
                   asChild
+                  className={link.className}
                 >
                   <a
                     href={link.href}
@@ -128,7 +130,7 @@ export function Footer() {
             viewport={{ once: true }}
             className="text-zinc-400 text-sm"
           >
-            © {currentYear} Your Name. All rights reserved.
+            © {currentYear} {portfolioData.personal.firstName} {portfolioData.personal.lastName}. All rights reserved.
           </motion.p>
           
           <motion.div
@@ -137,7 +139,7 @@ export function Footer() {
             viewport={{ once: true }}
             className="text-zinc-400 text-sm"
           >
-            Built with Next.js & Tailwind CSS
+            Built by {portfolioData.personal.firstName} {portfolioData.personal.lastName}
           </motion.div>
         </div>
       </div>

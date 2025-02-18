@@ -57,15 +57,15 @@ export const portfolioData = {
       technologies: ["Next.js", "React", "TypeScript", "Framer Motion", "Next UI"],
       image: "/projects/rebeccayeohmusic.png?height=300&width=400",
       link: "https://www.rebeccayeohmusic.com.au/",
-      github: "https://github.com/YSPlop/rebeccayeoh-music"
+      github: null
     },
     {
       title: "OpenAI Integrated Chatbot",
       description: "Created a free alternative to ChatGPT Plus by building a custom chatbot using Next.js and the OpenAI API. Features include streaming responses, conversation memory, and a sleek UI - because why pay for ChatGPT when you can build your own? Saved myself $20/month and learned a ton about AI integration in the process.",
       technologies: ["Next.js", "React", "OpenAI API"],
       image: "/projects/AIChatBot-overlay.jpg?height=300&width=400",
-      link: "#",
-      github: null
+      link: "https://personal-projects-silk.vercel.app/projects/AIChatBot",
+      github: "https://github.com/YSPlop/personal-projects/tree/main/src/app/projects/AIChatBot"
     },
     {
       title: "Twitter Sentiment Analysis",
@@ -73,23 +73,23 @@ export const portfolioData = {
       technologies: ["CouchDB", "MapReduce", "Data Analysis"],
       image: "/projects/SocialMediaAnalysis-overlay.svg?height=300&width=400",
       link: "#",
-      github: null
+      github: "https://github.com/YSPlop/COMP90024-T13"
     },
     {
       title: "Safe Circle Android App",
       description: "Mobile safety app with Firebase, Google Maps API, Kotlin, and Jetpack Compose.",
       technologies: ["Kotlin", "Firebase", "Google Maps API", "Jetpack Compose"],
       image: "/projects/Safecircle-overlay.png?height=300&width=400",
-      link: "#",
-      github: null
+      link: null,
+      github: "https://github.com/YSPlop/COMP90018_Ass2"
     },
     {
       title: "Tic Tac Toe",
       description: "Developed with React, Next JS and framer motion.",
       technologies: ["React", "Next.js", "Framer Motion"],
       image: "/projects/tictactoe-overlay.png?height=300&width=400",
-      link: "#",
-      github: null
+      link: "https://personal-projects-silk.vercel.app/projects/TicTacToe",
+      github: "https://github.com/YSPlop/personal-projects/tree/main/src/app/projects/TicTacToe"
     },
     {
       title: "Eco Living Insulations SEO Optimization",
@@ -104,7 +104,7 @@ export const portfolioData = {
       description: "Modern portfolio website built with Next.js 14, featuring server components, animations with Framer Motion, and a dark theme UI. Includes project showcases, blog integration, and contact form functionality.",
       technologies: ["Next.js", "TypeScript", "Framer Motion", "Tailwind CSS", "shadcn/ui"],
       image: "/projects/portfolio-2024.png?height=300&width=400",
-      link: "https://yongsheng.au",
+      link: null,
       github: "https://github.com/YSPlop/portfolio"
     },
     {
