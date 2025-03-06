@@ -1,6 +1,10 @@
+import { Navbar } from "@/components/Navbar";
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { SparklesCore } from "@/components/ui/sparkles";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Yukash's Portfolio",
@@ -14,7 +18,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-black">
+      <body className={inter.className}>
+        <Navbar />
         <div className="relative min-h-screen">
           <SparklesCore
             background="transparent"

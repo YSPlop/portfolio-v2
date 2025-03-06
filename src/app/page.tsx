@@ -10,7 +10,7 @@ export default function Home() {
       <Hero />
       <AboutNew />
       <Projects />
-      <Contact /> 
+      <Contact />
       <Footer />
       {/* Add other sections */}
     </main>
