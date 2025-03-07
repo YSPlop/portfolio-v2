@@ -25,7 +25,7 @@ export interface FormData {
     designSystem: boolean
     websiteMigration: boolean
     ecommerceSite: boolean
-    performanceEvaluation: boolean
+    generalInquiries: boolean
   }
   budget: string
   description: string
@@ -49,6 +49,7 @@ const serviceCard = {
 export function Contact() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [formData, setFormData] = useState<FormData>({
     firstName: '',
     lastName: '',
@@ -62,7 +63,7 @@ export function Contact() {
       designSystem: false,
       websiteMigration: false,
       ecommerceSite: false,
-      performanceEvaluation: false
+      generalInquiries: false
     },
     budget: '',
     description: ''
@@ -71,6 +72,20 @@ export function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (isSubmitting) return;
+    
+    // Validate required fields
+    const newErrors: { [key: string]: string } = {};
+    if (!formData.firstName.trim()) {
+      newErrors.firstName = 'First name is required';
+    }
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    }
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
     
     setIsSubmitting(true);
     try {
@@ -120,7 +135,7 @@ export function Contact() {
           designSystem: false,
           websiteMigration: false,
           ecommerceSite: false,
-          performanceEvaluation: false
+          generalInquiries: false
         },
         budget: '',
         description: ''
@@ -173,13 +188,20 @@ export function Contact() {
                     <input
                       type="text"
                       value={formData.firstName}
-                      onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                      className={styles.input}
+                      onChange={(e) => {
+                        setFormData({ ...formData, firstName: e.target.value });
+                        setErrors({ ...errors, firstName: '' });
+                      }}
+                      className={`${styles.input} ${errors.firstName ? 'border-red-500' : ''}`}
                       placeholder=" "
+                      required
                     />
                     <label className={styles.label}>
-                      First Name
+                      First Name <span className="text-red-500">*</span>
                     </label>
+                    {errors.firstName && (
+                      <span className="text-red-500 text-sm mt-1">{errors.firstName}</span>
+                    )}
                   </div>
 
                   <div className={styles.inputContainer}>
@@ -199,13 +221,20 @@ export function Contact() {
                     <input
                       type="email"
                       value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className={styles.input}
+                      onChange={(e) => {
+                        setFormData({ ...formData, email: e.target.value });
+                        setErrors({ ...errors, email: '' });
+                      }}
+                      className={`${styles.input} ${errors.email ? 'border-red-500' : ''}`}
                       placeholder=" "
+                      required
                     />
                     <label className={styles.label}>
-                      Email
+                      Email <span className="text-red-500">*</span>
                     </label>
+                    {errors.email && (
+                      <span className="text-red-500 text-sm mt-1">{errors.email}</span>
+                    )}
                   </div>
 
                   <div className={styles.inputContainer}>
@@ -273,7 +302,7 @@ export function Contact() {
                         designSystem: 'Design System',
                         websiteMigration: 'Website Migration',
                         ecommerceSite: 'E-commerce Site',
-                        performanceEvaluation: 'Performance Evaluation'
+                        generalInquiries: 'General Inquiries'
                       }[service];
 
                       return (
@@ -344,7 +373,7 @@ export function Contact() {
                     placeholder=" "
                   />
                   <label className={styles.textareaLabel}>
-                    Tell me about your project
+                    {formData.services.generalInquiries ? 'How can I help you?' : 'Tell me about your project'}
                   </label>
                 </div>
 

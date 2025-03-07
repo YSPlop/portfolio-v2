@@ -7,6 +7,8 @@ import { Button } from "./ui/button";
 import { Separator } from "@/components/ui/separator";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { portfolioData } from "@/data/portfolio";
+import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 // Create an icon map
 const iconMap = {
@@ -18,7 +20,34 @@ const iconMap = {
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
-  
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const handleScroll = async (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    
+    if (pathname !== '/') {
+      await router.push('/');
+      setTimeout(() => {
+        const element = document.querySelector(id);
+        if (element) {
+          element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          });
+        }
+      }, 1000);
+    } else {
+      const element = document.querySelector(id);
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }
+    }
+  };
+
   const socialLinks = Object.entries(portfolioData.personal.socialLinks).map(([key, value]) => {
     const Icon = iconMap[value.icon as keyof typeof iconMap];
     return {
@@ -62,13 +91,25 @@ export function Footer() {
           >
             <h3 className="text-xl font-bold">Quick Links</h3>
             <nav className="space-y-2">
-              <a href="#about" className="block text-zinc-400 hover:text-white transition-colors">
+              <a 
+                href="#about" 
+                onClick={(e) => handleScroll(e, '#about')}
+                className="block text-zinc-400 hover:text-white transition-colors"
+              >
                 About
               </a>
-              <a href="#projects" className="block text-zinc-400 hover:text-white transition-colors">
+              <a 
+                href="#projects" 
+                onClick={(e) => handleScroll(e, '#projects')}
+                className="block text-zinc-400 hover:text-white transition-colors"
+              >
                 Projects
               </a>
-              <a href="#contact" className="block text-zinc-400 hover:text-white transition-colors">
+              <a 
+                href="#contact" 
+                onClick={(e) => handleScroll(e, '#contact')}
+                className="block text-zinc-400 hover:text-white transition-colors"
+              >
                 Contact
               </a>
             </nav>

@@ -33,7 +33,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-5xl text-white font-bold mb-6"
+            className="text-4xl md:text-5xl text-white font-bold mb-6"
           >
             {portfolioData.personal.firstName}{" "}
             <AuroraText>{portfolioData.personal.lastName}</AuroraText>
@@ -42,7 +42,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-2xl text-gray-400 mb-4"
+            className="text-xl md:text-2xl text-gray-400 mb-4"
           >
             {portfolioData.personal.role}
           </motion.h2>
@@ -50,7 +50,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-xl text-gray-400 mb-8"
+            className="text-lg md:text-xl text-gray-400 mb-8"
           >
             {portfolioData.personal.description}
           </motion.p>

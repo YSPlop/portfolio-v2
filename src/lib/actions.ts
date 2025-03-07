@@ -2,14 +2,14 @@
 
 import nodemailer from 'nodemailer';
 
-type Services = {
+interface Services {
   websiteDevelopment: boolean;
   appDevelopment: boolean;
   designSystem: boolean;
   websiteMigration: boolean;
   ecommerceSite: boolean;
-  performanceEvaluation: boolean;
-};
+  generalInquiries: boolean;
+}
 
 export interface FormData {
   firstName: string;
