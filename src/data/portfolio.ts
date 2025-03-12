@@ -92,6 +92,14 @@ export const portfolioData = {
       github: "https://github.com/YSPlop/personal-projects/tree/main/src/app/projects/TicTacToe"
     },
     {
+      title: "Distributed Whiteboard Application",
+      description: "Built a real-time collaborative whiteboard application using Java RMI for distributed systems. Features include multi-user drawing capabilities, remote method invocation for synchronized updates, and fault tolerance mechanisms for server failures.",
+      technologies: ["Java", "RMI", "Distributed Systems", "Multi-threading"],
+      image: "/projects/DistributedWhiteboard-overlay.png?height=300&width=400", 
+      link: null,
+      github: "https://github.com/YSPlop/distributed-systems-whiteboard"
+    },
+    {
       title: "Eco Living Insulations SEO Optimization",
       description: "Implemented comprehensive SEO improvements for a local insulation business, including WordPress site optimization and Google Business Profile enhancement. Resulted in improved local search visibility and increased customer engagement.",
       technologies: ["WordPress", "SEO", "Google Business Profile", "Local SEO"],
