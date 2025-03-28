@@ -64,8 +64,8 @@ export const portfolioData = {
       description: "Created a free alternative to ChatGPT Plus by building a custom chatbot using Next.js and the OpenAI API. Features include streaming responses, conversation memory, and a sleek UI - because why pay for ChatGPT when you can build your own? Saved myself $20/month and learned a ton about AI integration in the process.",
       technologies: ["Next.js", "React", "OpenAI API"],
       image: "/projects/AIChatBot-overlay.jpg?height=300&width=400",
-      link: "https://personal-projects-silk.vercel.app/projects/AIChatBot",
-      github: "https://github.com/YSPlop/personal-projects/tree/main/src/app/projects/AIChatBot"
+      link: "https://plops-bot.vercel.app/",
+      github: "https://github.com/YSPlop/plops-bot"
     },
     {
       title: "Twitter Sentiment Analysis",
