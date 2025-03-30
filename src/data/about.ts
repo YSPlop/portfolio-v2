@@ -17,7 +17,6 @@ export const aboutData = {
       role: "Software Developer",
       company: "PS Design Studio",
       period: "May 2024 – August 2024",
-      type: "Contract",
       achievements: [
         "Developed seven custom websites from scratch, using HTML, Tailwind CSS, and JavaScript, all delivered with a CMS backend.",
         "Engineered front-end components and custom APIs, integrating data from Runway and Statamic CMS using Vue.js, Nuxt.js, GraphQL, Tailwind CSS, PHP, and Laravel.",
