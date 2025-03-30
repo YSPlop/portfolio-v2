@@ -197,7 +197,7 @@ export function AboutNew() {
                         <div>
                           <p className="text-gray-400">Industries</p>
                           <p className="text-white font-medium">
-                            {new Set(aboutData.experience.map(exp => exp.type || 'Other')).size}
+                            {new Set(aboutData.experience.map(exp => exp.company || 'Other')).size}
                           </p>
                         </div>
                         <div>
