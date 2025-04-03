@@ -84,6 +84,14 @@ export const portfolioData = {
       github: "https://github.com/YSPlop/COMP90018_Ass2"
     },
     {
+      title: "Personal Tax Calculator",
+      description: "Built an interactive tax calculator with real-time calculations and smooth animations. Features include income tax brackets visualization, deduction calculations, and a modern UI that makes tax estimation engaging and intuitive.",
+      technologies: ["Next.js", "React", "Framer Motion", "TypeScript"],
+      image: "/projects/tax-calculator-overlay.png?height=400&width=400",
+      link: "https://personal-tax-calculator.vercel.app/",
+      github: "https://github.com/YSPlop/personal-tax-calculator"
+    },
+    {
       title: "Tic Tac Toe",
       description: "Developed with React, Next JS and framer motion.",
       technologies: ["React", "Next.js", "Framer Motion"],
