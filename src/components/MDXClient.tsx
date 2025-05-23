@@ -20,7 +20,7 @@ interface PreProps {
   };
 }
 
-export function MDXClient({ source }: MDXComponentProps) {
+export default function MDXClient({ source }: MDXComponentProps) {
   const components = {
     img: ({ src, alt }: { src?: string; alt?: string }) => {
       if (!src) return null;

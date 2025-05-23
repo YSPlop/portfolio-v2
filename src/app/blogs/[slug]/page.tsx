@@ -78,7 +78,7 @@ export default async function BlogPage({ params }: BlogPostPageProps) {
                   <Clock className="h-4 w-4" />
                   <span>{readingTime}</span>
                 </div>
-                <div className="ml-auto">
+                <div className="ml-auto text-black">
                   <SocialShare title={blog.title} />
                 </div>
               </div>

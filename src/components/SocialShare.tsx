@@ -81,7 +81,7 @@ export function SocialShare({ title }: SocialShareProps) {
                     key={link.name}
                     variant="outline"
                     size="sm"
-                    className="flex items-center gap-1"
+                    className="flex items-center gap-1 "
                     onClick={() => window.open(link.url, '_blank')}
                   >
                     {link.icon}
