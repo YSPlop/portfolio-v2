@@ -10,7 +10,7 @@ export const aboutData = {
       linkedin: { name: "Yukash Sivaraj", url: "https://www.linkedin.com/in/yukash-sivaraj/" }
     }
   },
-  summary: "Full Stack Software Developer with expertise in modern front-end and back-end frameworks, agile methodologies, and advanced design tools. Skilled in delivering secure, scalable solutions, optimizing performance, and collaborating across teams to drive impactful, innovative outcomes.",
+  summary: "Software Developer with expertise in modern front-end and back-end frameworks, agile methodologies, and advanced design tools. Skilled in delivering secure, scalable solutions, optimizing performance, and collaborating across teams to drive impactful, innovative outcomes.",
   
   experience: [
     {

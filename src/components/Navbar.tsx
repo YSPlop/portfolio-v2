@@ -87,6 +87,7 @@ export const Navbar = () => {
                 <NavLink href="#about" onClick={(e) => handleScroll(e, '#about')}>About</NavLink>
                 <NavLink href="#projects" onClick={(e) => handleScroll(e, '#projects')}>Projects</NavLink>
                 <NavLink href="#contact" onClick={(e) => handleScroll(e, '#contact')}>Contact</NavLink>
+                <NavLink href="/blogs" onClick={(e) => handleScroll(e, '#blogs')}>Blogs</NavLink>
               </div>
             </div>
 
@@ -127,6 +128,9 @@ export const Navbar = () => {
                 </MobileNavLink>
                 <MobileNavLink href="#contact" onClick={(e) => { handleScroll(e, '#contact'); setIsOpen(false); }}>
                   Contact
+                </MobileNavLink>
+                <MobileNavLink href="/blogs" onClick={(e) => { handleScroll(e, '#blogs'); setIsOpen(false); }}>
+                  Blogs
                 </MobileNavLink>
               </div>
             </motion.div>

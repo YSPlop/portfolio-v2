@@ -12,7 +12,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { PokemonCard } from "@/components/ui/pokemon-card";
-import { TextGenerateEffect } from "@/components/text-generate-effect";
 import React from "react";
 
 
@@ -43,7 +42,7 @@ export function AboutNew() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl font-bold mb-6">About Me</h2>
-            <TextGenerateEffect words={aboutData.summary} />
+              {aboutData.summary} 
           </motion.div>
 
           {/* Fun Facts Section */}
