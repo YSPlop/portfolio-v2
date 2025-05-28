@@ -33,5 +33,16 @@ export const blogData: BlogPost[] = [
     coverImage: "http://learn.nextwork.org/merry_vermilion_zany_llama/uploads/aws-devops-cicd_ba6d42ae",
     tags: ["DevOps", "AWS", "CI/CD", "Cloud Computing", "Automation"],
     folder: "devops"
+  },
+  {
+    id: "3",
+    title: "Set Up a Web App in the Cloud",
+    slug: "devops-challenge-1",
+    excerpt: "Day 1 of the DevOps Challenge: Learn how to set up an EC2 instance, configure SSH access, and deploy a Java web application using VS Code and Maven.",
+    date: "2024-03-16",
+    author: "Yukash Sivaraj",
+    coverImage: "http://learn.nextwork.org/merry_vermilion_zany_llama/uploads/aws-devops-vscode_7a1de541",
+    tags: ["AWS", "EC2", "Java", "Maven", "VS Code", "SSH", "Web Development"],
+    folder: "devops-challenge-1"
   }
 ]; 
