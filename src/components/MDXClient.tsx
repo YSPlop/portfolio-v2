@@ -58,13 +58,13 @@ export default function MDXClient({ source }: MDXComponentProps) {
       <p className="my-4 leading-relaxed" {...props} />
     ),
     ul: (props: React.HTMLAttributes<HTMLUListElement>) => (
-      <ul className="list-disc list-inside my-4 space-y-2" {...props} />
+      <ul className="list-disc pl-6 my-4 space-y-2" {...props} />
     ),
     ol: (props: React.HTMLAttributes<HTMLOListElement>) => (
-      <ol className="list-decimal list-inside my-4 space-y-2" {...props} />
+      <ol className="list-decimal pl-6 my-4 space-y-2" {...props} />
     ),
     li: (props: React.HTMLAttributes<HTMLLIElement>) => (
-      <li className="ml-4" {...props} />
+      <li className="pl-2" {...props} />
     ),
     pre: ({ children }: PreProps) => (
       <div className="relative group">

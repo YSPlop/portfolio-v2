@@ -23,13 +23,13 @@ Services I used were GitHub, AWS IAM, and AWS CodeCommit. These services were es
 
 Key concepts I learnt include:
 
-Version Control with Git & GitHub: I practiced staging (git add), committing (git commit), and pushing (git push) code changes to a remote repository. This is a foundational DevOps skill for tracking and collaborating on software projects.
+- Version Control with Git & GitHub: I practiced staging (git add), committing (git commit), and pushing (git push) code changes to a remote repository. This is a foundational DevOps skill for tracking and collaborating on software projects.
 
-GitHub Authentication with Personal Access Token (PAT): I learned that GitHub no longer supports password-based authentication for Git operations. Instead, a PAT is required for secure access, which adds an extra layer of security.
+- GitHub Authentication with Personal Access Token (PAT): I learned that GitHub no longer supports password-based authentication for Git operations. Instead, a PAT is required for secure access, which adds an extra layer of security.
 
-AWS IAM Users and Permissions: I created an IAM user to securely access AWS services, and understood how IAM roles, policies, and credentials are used to manage permissions in the cloud.
+- AWS IAM Users and Permissions: I created an IAM user to securely access AWS services, and understood how IAM roles, policies, and credentials are used to manage permissions in the cloud.
 
-Connecting GitHub to AWS: I configured Git credentials and used the AWS CLI.
+- Connecting GitHub to AWS: I configured Git credentials and used the AWS CLI.
 
 ### Project reflection
 
@@ -106,8 +106,7 @@ GitHub authentication failed when I entered my password because GitHub no longer
 A Github token is a string of randomized characters that is used as an Identity verifier to approve devices to be connected to a profile's repo. I am using one in this project because user login is discontinued by github and this seems to be the most effective way to connect my EC2 instance to my github repositories.
 
 I could set up with a Github token by 
-Github > settings > Developer settings >  Select Personal access tokens. > Select Tokens (classic). > Select Generate new token.
-> Select Generate new token (classic) > select repo for perms and generate token
+Github > settings > Developer settings >  Select Personal access tokens. > Select Tokens (classic). > Select Generate new token.> Select Generate new token (classic) > Select repo for perms and generate token
 
 ![Image](http://learn.nextwork.org/merry_vermilion_zany_llama/uploads/aws-devops-github_fa11169d)
 
