@@ -11,6 +11,7 @@ import { MDX } from '@/components/MDX';
 import { TableOfContents } from '@/components/TableOfContents';
 import { SocialShare } from '@/components/SocialShare';
 import { Footer } from '@/components/Footer';
+import { RelatedBlogs } from '@/components/RelatedBlogs';
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -42,6 +43,7 @@ export default async function BlogPage({ params }: BlogPostPageProps) {
   const paramsData = await params;
   const { slug } = paramsData;
   const { blog, content, readingTime } = await getBlogBySlug(slug);
+  const allBlogs = await getAllBlogs();
   
   return (
     <div className="min-h-screen bg-black text-white">
@@ -112,9 +114,12 @@ export default async function BlogPage({ params }: BlogPostPageProps) {
               <MDX content={content} />
             </div>
             
+            {/* Related Blogs */}
+            <RelatedBlogs currentBlog={blog} allBlogs={allBlogs} />
           </div>
         </div>
       </div>
+      
       <Footer />  
     </div>
   );
