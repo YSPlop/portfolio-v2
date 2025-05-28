@@ -44,5 +44,16 @@ export const blogData: BlogPost[] = [
     coverImage: "http://learn.nextwork.org/merry_vermilion_zany_llama/uploads/aws-devops-vscode_7a1de541",
     tags: ["DevOps", "AWS", "CI/CD", "EC2", "Java", "Maven", "VS Code", "SSH"],
     folder: "devops-challenge-1"
+  },
+  {
+    id: "4",
+    title: "Connect a GitHub Repo with AWS",
+    slug: "devops-challenge-2",
+    excerpt: "Day 2 of the DevOps Challenge: Learn how to set up Git version control, create a GitHub repository, configure authentication with personal access tokens, and connect your EC2 instance to GitHub.",
+    date: "2024-03-17",
+    author: "Yukash Sivaraj",
+    coverImage: "http://learn.nextwork.org/merry_vermilion_zany_llama/uploads/aws-devops-github_dd9d254e",
+    tags: ["DevOps", "AWS", "GitHub", "Git", "Version Control", "IAM", "EC2"],
+    folder: "devops-challenge-2"
   }
 ]; 
