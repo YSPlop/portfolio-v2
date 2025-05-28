@@ -86,7 +86,7 @@ export function Blogs({ blogs }: BlogsProps) {
                         </Badge>
                       ))}
                       {blog.tags.length > 3 && (
-                        <Badge variant="outline">+{blog.tags.length - 3}</Badge>
+                        <Badge variant="secondary">+{blog.tags.length - 3}</Badge>
                       )}
                     </div>
                   </CardContent>

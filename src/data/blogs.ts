@@ -23,5 +23,15 @@ export const blogData: BlogPost[] = [
     tags: ["Large Language Models", "Tokens", "N-grams"],
     folder: "large-language-models"
   },
-  
+  {
+    id: "2",
+    title: "Join the 7 Day DevOps Challenge!",
+    slug: "devops",
+    excerpt: "Follow my journey as I build a complete CI/CD pipeline using AWS services in just 7 days, learning essential DevOps practices and tools along the way.",
+    date: "2024-03-15",
+    author: "Yukash Sivaraj",
+    coverImage: "http://learn.nextwork.org/merry_vermilion_zany_llama/uploads/aws-devops-cicd_ba6d42ae",
+    tags: ["DevOps", "AWS", "CI/CD", "Cloud Computing", "Automation"],
+    folder: "devops"
+  }
 ]; 

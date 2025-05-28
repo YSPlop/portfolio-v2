@@ -10,6 +10,7 @@ import { formatDate } from "@/utils/date";
 import { MDX } from '@/components/MDX';
 import { TableOfContents } from '@/components/TableOfContents';
 import { SocialShare } from '@/components/SocialShare';
+import { Footer } from '@/components/Footer';
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -111,16 +112,10 @@ export default async function BlogPage({ params }: BlogPostPageProps) {
               <MDX content={content} />
             </div>
             
-            {/* Author Info */}
-            <div className="mt-12 p-6 bg-zinc-900/50 border border-zinc-800 rounded-lg">
-              <h3 className="text-xl font-bold mb-2">About the Author</h3>
-              <p className="text-gray-400">
-                {blog.author} is a software developer specializing in modern web technologies.
-              </p>
-            </div>
           </div>
         </div>
       </div>
+      <Footer />  
     </div>
   );
 } 
