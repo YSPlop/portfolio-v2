@@ -1,5 +1,7 @@
 # Secure Packages with CodeArtifact
 
+> Credit to nextwork.org for assisting with instructions and content
+
 **Author:** Yukash Sivaraj  
 **Email:** sivarajyukash@gmail.com
 
@@ -72,7 +74,7 @@ The JSON policy I set up grants the necessary permissions to allow users or serv
 
 - `codeartifact: GetRepositoryEndpoint`: to get the endpoint URL for the repository.
 
-- `codeartifact`: ReadFromRepository: to download or install packages.
+- `codeartifact: ReadFromRepository`: to download or install packages.
 
 - `codeartifact: PublishPackageVersion`: to publish new versions of packages.
 

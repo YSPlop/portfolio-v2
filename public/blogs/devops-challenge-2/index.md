@@ -1,6 +1,6 @@
 # Connect a GitHub Repo with AWS
 
-> Credit to nextwork.org for intructing
+> Credit to nextwork.org for assisting with instructions and content
 
 **Author:** Yukash Sivaraj  
 **Email:** sivarajyukash@gmail.com

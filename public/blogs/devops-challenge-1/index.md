@@ -1,6 +1,9 @@
 # Set Up a Web App in the Cloud
 
 ## Introduction
+
+> Credit to nextwork.org for assisting with instructions and content
+
 This project is Day ONE of a seven day DevOps Challenge! In this project, we're going to set up the foundations of a CI/CD pipeline by creating a web app from scratch. We'll need to launch an EC2 instance and connect to the instance using VSCode to generate a web app inside.
 
 ### Key tools and concepts
