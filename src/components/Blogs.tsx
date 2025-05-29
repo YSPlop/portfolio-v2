@@ -43,7 +43,7 @@ export function Blogs({ blogs }: BlogsProps) {
           Latest Blogs
         </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {blogs.slice(0, 3).map((blog, index) => (
+          {blogs.slice(-3).reverse().map((blog, index) => (
             <motion.div
               key={blog.id}
               initial={{ opacity: 0, y: 20 }}
