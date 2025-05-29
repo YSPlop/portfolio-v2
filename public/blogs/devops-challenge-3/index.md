@@ -11,7 +11,7 @@
 
 ## Introducing Today's Project!
 
-In this project, I will demonstrate the use of Code Artefact my Amazon in the CI/CD pipeline. Im doing this project to learn how to upload/manage packages and integrate it as part of the CI/CD pipeline.
+In this project, I will demonstrate the use of Code Artifact my Amazon in the CI/CD pipeline. Im doing this project to learn how to upload/manage packages and integrate it as part of the CI/CD pipeline.
 
 ### Key tools and concepts
 
