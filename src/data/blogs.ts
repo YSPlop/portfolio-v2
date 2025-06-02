@@ -66,5 +66,16 @@ export const blogData: BlogPost[] = [
     coverImage: "http://learn.nextwork.org/merry_vermilion_zany_llama/uploads/aws-devops-codeartifact-updated_1d79e699",
     tags: ["AWS", "CodeArtifact", "DevOps", "IAM", "Maven", "Package Management", "Security"],
     folder: "devops-challenge-3"
+  },
+  {
+    id: "6",
+    title: "Continuous Integration with CodeBuild",
+    slug: "devops-challenge-4",
+    excerpt: "Day 4 of the DevOps Challenge: Learn how to set up AWS CodeBuild for automated builds, integrate with GitHub using AWS CodeConnections, configure build environments, and implement automated testing in your CI/CD pipeline.",
+    date: "2024-03-19",
+    author: "Yukash Sivaraj",
+    coverImage: "http://learn.nextwork.org/merry_vermilion_zany_llama/uploads/aws-devops-codebuild-updated_35588a47",
+    tags: ["AWS", "CodeBuild", "CI/CD", "DevOps", "GitHub", "IAM", "S3", "Testing"],
+    folder: "devops-challenge-4"
   }
 ]; 
