@@ -10,7 +10,7 @@ export const aboutData = {
       linkedin: { name: "Yukash Sivaraj", url: "https://www.linkedin.com/in/yukash-sivaraj/" }
     }
   },
-  summary: "Software Developer with expertise in modern front-end and back-end frameworks, agile methodologies, and advanced design tools. Skilled in delivering secure, scalable solutions, optimizing performance, and collaborating across teams to drive impactful, innovative outcomes.",
+  summary: "As a versatile Software Developer, I craft high-performance web applications and scalable solutions using modern frameworks like React and Next.js. I specialize in backend development, REST APIs, and integrating cloud services, with a keen focus on automating deployments using AWS. My passion lies in delivering impactful software that excels in both user experience and technical efficiency.",
   
   experience: [
     {
