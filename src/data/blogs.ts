@@ -77,5 +77,16 @@ export const blogData: BlogPost[] = [
     coverImage: "http://learn.nextwork.org/merry_vermilion_zany_llama/uploads/aws-devops-codebuild-updated_35588a47",
     tags: ["AWS", "CodeBuild", "CI/CD", "DevOps", "GitHub", "IAM", "S3", "Testing"],
     folder: "devops-challenge-4"
+  },
+  {
+    id: "7",
+    title: "Deploy a Web App with CodeDeploy",
+    slug: "devops-challenge-5",
+    excerpt: "Day 5 of the DevOps Challenge: Learn how to use AWS CodeDeploy for automated deployments, set up deployment groups, configure rollback strategies, and implement disaster recovery in your CI/CD pipeline.",
+    date: "2024-03-20",
+    author: "Yukash Sivaraj",
+    coverImage: "http://learn.nextwork.org/merry_vermilion_zany_llama/uploads/aws-devops-codedeploy-updated_val-27",
+    tags: ["AWS", "CodeDeploy", "CI/CD", "DevOps", "CloudFormation", "IAM", "EC2", "Disaster Recovery"],
+    folder: "devops-challenge-5"
   }
 ]; 

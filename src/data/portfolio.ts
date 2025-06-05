@@ -7,6 +7,8 @@ export const portfolioData = {
     about: "I'm a passionate software developer with expertise in building modern web applications. I specialize in creating seamless user experiences using cutting-edge technologies. With a strong foundation in both frontend and backend development, I bring ideas to life through clean, efficient, and scalable code.",
     location: "Melbourne, Australia",
     email: "sivarajyukash@gmail.com",
+    profileImage: "/images/image.png",
+    isAvailableForHire: true,
     socialLinks: {
       github: {
         url: "https://github.com/YSPlop",

@@ -46,7 +46,13 @@ export function Projects() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="bg-zinc-900 border-zinc-800 overflow-hidden h-full flex flex-col">
+              <Card 
+                className="bg-zinc-900 border-zinc-800 overflow-hidden h-full flex flex-col"
+                data-project={project.title}
+                tabIndex={0}
+                role="article"
+                aria-label={`${project.title} - ${project.description}`}
+              >
                 {project.image && (
                   <div className="relative h-48 w-full">
                     <Image

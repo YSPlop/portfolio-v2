@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useSpring, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter, usePathname } from 'next/navigation';
 import { portfolioData } from '@/data/portfolio';
 import { AuroraText } from './magicui/aurora-text';
@@ -73,11 +74,31 @@ export const Navbar = () => {
       <nav className="relative bg-black/80 backdrop-blur-sm border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            {/* Logo/Brand */}
-            <div className="flex-shrink-0">
-              <Link href="/" onClick={(e) => handleScroll(e, '#hero')} className="text-white font-bold text-xl">
-                {portfolioData.personal.firstName}{" "}
-                <AuroraText>{portfolioData.personal.lastName}</AuroraText>
+            {/* Profile Section */}
+            <div className="flex-shrink-0 flex items-center space-x-3">
+              <Link href="/" onClick={(e) => handleScroll(e, '#hero')} className="flex items-center space-x-3">
+                {/* Profile Image */}
+                <div className="relative h-10 w-10 rounded-full overflow-hidden border-2 border-white/20">
+                  <Image
+                    src={portfolioData.personal.profileImage}
+                    alt="Profile"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                {/* Name and Status */}
+                <div className="flex flex-col">
+                  <div className="text-white font-bold text-lg">
+                    {portfolioData.personal.firstName}{" "}
+                    <AuroraText>{portfolioData.personal.lastName}</AuroraText>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <span className={`h-2 w-2 rounded-full mr-2 ${portfolioData.personal.isAvailableForHire ? 'bg-green-500' : 'bg-red-500'}`} />
+                    <span className="text-gray-300">
+                      {portfolioData.personal.isAvailableForHire ? 'Available for hire' : 'Currently employed'}
+                    </span>
+                  </div>
+                </div>
               </Link>
             </div>
 
@@ -120,6 +141,7 @@ export const Navbar = () => {
               className="fixed left-0 top-16 w-full bg-black/80 backdrop-blur-sm border-b border-white/10 md:hidden"
             >
               <div className="flex flex-col items-center justify-start p-6 space-y-6">
+                {/* Mobile Search */}
                 <MobileNavLink href="#about" onClick={(e) => { handleScroll(e, '#about'); setIsOpen(false); }}>
                   About
                 </MobileNavLink>
