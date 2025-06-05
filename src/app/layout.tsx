@@ -1,10 +1,13 @@
 import { Navbar } from "@/components/Navbar";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Rethink_Sans } from "next/font/google";
 import "./globals.css";
 import { SparklesCore } from "@/components/ui/sparkles";
 
-const inter = Inter({ subsets: ["latin"] });
+const rethinkSans = Rethink_Sans({ 
+  subsets: ["latin"],
+  weight: ['400', '500', '600', '700', '800']
+});
 
 export const metadata: Metadata = {
   title: "Yukash's Portfolio",
@@ -18,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={rethinkSans.className}>
         <Navbar />
         <div className="relative min-h-screen">
           <SparklesCore
