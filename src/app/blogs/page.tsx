@@ -8,7 +8,7 @@ import Link from "next/link";
 import { Footer } from "@/components/Footer";
 export const metadata = {
   title: 'Blogs | Yukash Sivaraj',
-  description: 'Technical articles, case studies, and insights on web development, SEO, and more.',
+  description: 'Technical articles, case studies, and insights on my journey as a cloud engineer',
 };
 
 export default async function BlogsPage() {

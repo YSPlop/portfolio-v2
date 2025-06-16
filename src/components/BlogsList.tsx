@@ -54,7 +54,7 @@ export function Blogs({ blogs }: BlogsProps) {
           {selectedTag && (
             <Badge 
               variant="outline" 
-              className="cursor-pointer bg-zinc-800 hover:bg-zinc-700"
+              className="cursor-pointer bg-zinc-800 hover:bg-zinc-700 text-white"
               onClick={() => setSelectedTag(null)}
             >
               Clear Filter
