@@ -184,7 +184,10 @@ export default {
   			ripple: 'ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite',
   			'meteor': 'meteor 10s linear infinite',
   			'meteor-trail': 'meteor-trail 10s linear infinite'
-  		}
+  		},
+  		fontFamily: {
+  			sans: ["'Open Sans'", 'Arial', 'Helvetica', 'sans-serif'],
+  		},
   	}
   },
   plugins: [require("tailwindcss-animate")],

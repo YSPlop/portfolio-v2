@@ -1,12 +1,12 @@
 import { Navbar } from "@/components/Navbar";
 import type { Metadata } from "next";
-import { Rethink_Sans } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import { SparklesCore } from "@/components/ui/sparkles";
 
-const rethinkSans = Rethink_Sans({ 
+const openSans = Open_Sans({
   subsets: ["latin"],
-  weight: ['400', '500', '600', '700', '800']
+  weight: ["400", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={rethinkSans.className}>
+      <body className={openSans.className}>
         <Navbar />
         <div className="relative min-h-screen">
           <SparklesCore

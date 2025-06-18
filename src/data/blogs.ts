@@ -88,5 +88,16 @@ export const blogData: BlogPost[] = [
     coverImage: "http://learn.nextwork.org/merry_vermilion_zany_llama/uploads/aws-devops-codedeploy-updated_val-27",
     tags: ["AWS", "CodeDeploy", "CI/CD", "DevOps", "CloudFormation", "IAM", "EC2", "Disaster Recovery"],
     folder: "devops-challenge-5"
+  },
+  {
+    id: "8",
+    title: "Automating CI/CD Infrastructure with AWS CloudFormation",
+    slug: "devops-challenge-6",
+    excerpt: "Day 6 of the DevOps Challenge: Learn how to automate the provisioning of a complete CI/CD pipeline on AWS using CloudFormation, embrace Infrastructure as Code (IaC) best practices, and resolve real-world deployment challenges.",
+    date: "2024-03-21",
+    author: "Yukash Sivaraj",
+    coverImage: "http://learn.nextwork.org/merry_vermilion_zany_llama/uploads/aws-devops-cloudformation-updated_bd8b836b",
+    tags: ["AWS", "CloudFormation", "CI/CD", "DevOps", "IaC", "Automation", "Infrastructure as Code"],
+    folder: "devops-challenge-6"
   }
 ]; 
